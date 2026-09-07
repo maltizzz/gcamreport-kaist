@@ -16,7 +16,6 @@
 #' @return A dataframe containing the data retrieved from the specified non-CO2 emissions query.
 #' @export
 
-# Specifying the parameters
 data_query <- function(type, db_path, db_name, prj_name, scenarios,
                        desired_regions = "All", GCAM_version = 'v8.2',
                        queries_nonCO2_file = NULL) {
