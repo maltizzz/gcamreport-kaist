@@ -4,7 +4,7 @@ devtools::load_all(".", reset = TRUE)
 
 folder_name <<- "gcam-v9.1-Windows-Release-Package"
 db_path <<- paste("C:/Users/pjhan/Desktop/GCAM/", folder_name, "/output", sep = "")
-db_name <<- "database_basexdb"
+db_name <<- "database_basexdb.0"
 GCAM_version <<- "v8.2"
 prj_name_ <<- "gcam_v9.1_report.dat"
 
@@ -25,4 +25,4 @@ output_name <- paste(db_path, "/gcam_v9.1_report_standardized.RData", sep = "")
 
 ##print(output_name)
 
-##launch_gcamreport_ui(data_path = output_name, GCAM_version = GCAM_version)
+launch_gcamreport_ui(data_path = output_name, GCAM_version = GCAM_version)
