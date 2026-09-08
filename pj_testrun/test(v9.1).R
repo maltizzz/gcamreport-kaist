@@ -1,12 +1,13 @@
 setwd("C:/Users/pjhan/Desktop/git/iam_models/GCAM/gcamreport")
-
 devtools::load_all(".", reset = TRUE)
 
-folder_name <<- "gcam-v9.1-Windows-Release-Package"
+version_ <<- "9.1"
+
+folder_name <<- paste("gcam-v", version_, "-Windows-Release-Package", sep = "")
 db_path <<- paste("C:/Users/pjhan/Desktop/GCAM/", folder_name, "/output", sep = "")
-db_name <<- "database_basexdb.0"
+db_name <<- "database_basexdb"
 GCAM_version <<- "v8.2"
-prj_name_ <<- "gcam_v9.1_report.dat"
+prj_name_ <<- paste("gcam_v", version_, "_report.dat", sep="")
 
 ## generate report
 
@@ -21,7 +22,8 @@ generate_report(
 )
 
 ## -- launch the user interface
-output_name <- paste(db_path, "/gcam_v9.1_report_standardized.RData", sep = "")
+Rdata_path_ <- paste("/gcam_v", version_, "_report_standardized.RData", sep="")
+output_name <- paste(db_path, Rdata_path_, sep = "")
 
 ##print(output_name)
 
